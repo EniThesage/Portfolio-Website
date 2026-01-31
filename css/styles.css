@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*Nav bar styling goes here*/
+.navbar {
+  min-height: 76px;
+  padding: 0;
+}
+
+div.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #d3e979;
+  height: 76px;
+}
+
+a.brand-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #c7c7c7;
+  text-decoration: none;
+}
+
+a.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  color: #c7c7c7;
+  transition: all 500ms ease-in-out;
+  position: relative;
+}
+
+a.nav-link:hover {
+  color: #d3e979;
+}
+
+a.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  border-radius: 3px;
+  background: #d3e979;
+  transition: width 0.3s ease;
+}
+
+a.nav-link:hover::after {
+  width: 100%;
+}
+
+.offcanvas-header {
+  color: #d3e979;
+  font-size: 20px;
+}
+
+
+/*Home section styling goes here*/
+.home-section {
+  padding-top: 116px;
+}
+
+.hero-content {
+  max-width: 544px;
+  gap: 40px;
+}
+
+.hero-image {
+  max-width:600px
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h1.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 101px;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+p.hero-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #c7c7c7;
+  max-width: 544px;
+}
+
+a.contact-btn {
+  background: #d3e979; 
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  color: #000;
+  border: none;
+  border-radius: 100px;
+  height: 54px;
+  padding: 20px 10px 20px 24px;
+  font-weight: 700;
+  transition: all 500ms ease-in-out;
+  line-height: 1;
+}
+
+a.contact-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #d3e979;
+  transform: translateY(-5%);
+}
+
+svg.icon-sm {
+  display: inline-block;
+  flex-shrink: 0;
+  background: black;
+  border-radius: 50%;
+  width: 12px;
+  height: 10px;
+}
+
+a.social-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #222222;
+  color: #d3e979;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: translateY(-5%);
+}
+
+@media (min-width: 992px) {
+  .nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .brand-name {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  a.nav-link::after {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  a.nav-link:hover::after {
+    width: 30%;  
+}
+}
+
+@media (max-width: 576px) {
+
+  .home-section {
+    padding-top: 116px;
+  }
+
+  .hero-content {
+    max-width: 343px;
+    gap: 32px;
+  }
+
+  h1.hero-title {
+    font-size: 57px;
+    line-height: 1;
+  }
+
+  h1.hero-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #c7c7c7;
+  }
+
+  a.contact-btn {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  a.social-icon {
+    width: 48px;
+    height: 48px;
+    background: #222222;
+  }
+
+  .hero-image {
+    max-width: 343px;
+    margin-top: 32px;
+  }
+
+  .hero-image img {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+
