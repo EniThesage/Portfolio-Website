@@ -69,6 +69,8 @@ a.nav-link:hover::after {
 /*Home section styling goes here*/
 .home-section {
   padding-top: 116px;
+  min-height: 100vh;
+  border-bottom: 2px solid #484848;
 }
 
 .hero-content {
@@ -77,7 +79,9 @@ a.nav-link:hover::after {
 }
 
 .hero-image {
-  max-width:600px
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image img {
@@ -153,6 +157,134 @@ a.social-icon {
   transform: translateY(-5%);
 }
 
+/*Projects section styling goes here*/
+#projects.projects-section {
+  padding: 80px 0;
+  border-bottom: 1px solid #484848;
+}
+
+div.projects-contents h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+div.projects-contents p.project-content-paragraph {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #c7c7c7;
+  max-width: 600px;
+  padding-bottom: 40px;
+}
+
+div.project-card {
+  background: transparent;
+  padding: 0;
+  max-width: 1224px;
+  margin-inline: auto;
+  padding-bottom: 40px;
+}
+
+div.image-content {
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 126px 57px 126px 57px; 
+}
+
+div.image-content .work-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #000;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+img.project-img {
+  width: 486px;
+  height: 347px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #000;
+  display: block;
+  margin: 0;
+}
+
+div.right-project-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 546px;
+  width: 100%;
+  padding-top: 40px;
+  gap: 20px;
+}
+
+div.right-project-content h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+div.right-project-content p.text-description {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #c7c7c7;
+}
+
+div p.info-tag {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+div.project-row span.info-label {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+div.project-row {
+  border-top: 1px solid #484848;
+  padding: 16px 0;
+}
+
+a.link-icons {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d3e979;
+  border-bottom: 1px solid #d3e979;
+  transition: all 500ms ease-in-out;
+}
+
+a.link-icons:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  transform: translateY(-2px);
+}
+
+
 @media (min-width: 992px) {
   .nav-container {
     max-width: 1440px;
@@ -176,10 +308,17 @@ a.social-icon {
   a.nav-link:hover::after {
     width: 30%;  
 }
+
+  .hero-image {
+    margin: 0 auto 30px auto;
+  }
+  
+  div.right-project-content{
+    max-width: none; 
+  }
 }
 
 @media (max-width: 576px) {
-
   .home-section {
     padding-top: 116px;
   }
@@ -214,12 +353,66 @@ a.social-icon {
 
   .hero-image {
     max-width: 343px;
-    margin-top: 32px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-image img {
-    height: 400px;
+    width: min(343px, 100%);
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  #projects.projects-section {
+    padding: 64px 0;
+  }
+
+  div.projects-contents h2  {
+    font-size: 43px;
+    line-height: -0.02em;
+  }
+
+  div.projects-contents p.project-content-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 343px;
+  }
+
+  div.image-content {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 16px;
+    margin: 0;
+  }
+
+  img.project-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  div.right-project-content {
+    max-width: 343px;
+    margin: 0 auto;
+  }  
+
+  div.right-project-content h3 {
+    font-size: 24px;
+    gap: 8px;
+  }
+
+  div.right-project-content p.text-description {
+    font-size: 16px;
+  }
+
+  div.right-project-content{
+    max-width: none; 
   }
 }
 
