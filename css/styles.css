@@ -3,6 +3,10 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /*Nav bar styling goes here*/
 .navbar {
   min-height: 76px;
@@ -108,7 +112,7 @@ p.hero-text {
   max-width: 544px;
 }
 
-a.contact-btn {
+a.contact-btn, .contact-btn {
   background: #d3e979; 
   font-size: 16px;
   font-family: "Manrope", sans-serif;
@@ -122,8 +126,8 @@ a.contact-btn {
   line-height: 1;
 }
 
-a.contact-btn:hover {
-  background-color: transparent;
+a.contact-btn:hover, .contact-btn:hover {
+  background: transparent;
   color: #fff;
   border: 1px solid #d3e979;
   transform: translateY(-5%);
@@ -152,7 +156,7 @@ a.social-icon {
   transition: all 500ms ease-in-out;
 }
 
-.social-icon:hover {
+a.social-icon:hover {
   color: #fff;
   transform: translateY(-5%);
 }
@@ -270,6 +274,7 @@ div.project-row {
 }
 
 a.link-icons {
+  display: inline-block;
   font-family: "Manrope", sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -282,14 +287,282 @@ a.link-icons:hover {
   color: #fff;
   border-bottom: 2px solid #fff;
   transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/*About section styling goes here*/
+#about.about-section {
+  padding: 116px 0 80px 0;
+  border-bottom: 1px solid #484848;
+}
+
+.about-section h2.about-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 101px;
+  line-height: 0.9;
+  letter-spacing: 0;
+  max-width: 307px;
+}
+
+div.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 704px;
+}
+
+.about-section p.about-paragraph {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.about-section p.about-description-paragraph {
+  font-family: "Manrope", sans-serif; 
+  font-weight: 400; 
+  font-size: 18px; 
+  line-height: 1.5; 
+  color: #c7c7c7; 
+  text-align: justify;
+}
+
+/*contact section styling goes here*/
+#contact.contact-section {
+  padding: 116px 40px 80px;
+  border-bottom: 1px solid #484848;
+}
+
+div h2.contact-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.contact-section p.contact-paragraph {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c7c7c7;
+  max-width: 302px;
+  padding-bottom: 0;
+  margin: 16px 0;
+}
+
+.contact-section div.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+a.social-icon.enve {
+  display: inline-flex;
+  background: transparent;
+}
+
+div.contact-left, div.contact-form-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+div form.contact-form {
+  gap: 48px;
+}
+
+.field-group {
+  gap: 8px;
+}
+
+.contact-form label.form-label {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #c7c7c7;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.contact-form input.form-control, .contact-form textarea.form-control {
+  background: #1a1a1a;
+  border: 1px solid #484848;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: #ffffff;
+  height: 51px;
+  padding: 12px 16px;
+}
+
+.contact-form textarea.form-control {
+  height: 156px;
+  resize: none ;
+}
+
+.contact-form input.form-control:focus, .contact-form textarea.form-control:focus {
+  border: 1px solid #d3e979;
+  box-shadow: 0 0 0 5px rgba(211, 233, 122, 0.2);
+}
+
+.contact-btn {
+  display: inline-block;
+}
+
+.contact-form button.contact-btn {
+  width: fit-content;
+}
+
+/*Footer styling goes here*/
+div p.footer-paragraph {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 1;
+  letter-spacing: 1.5px;
 }
 
 
+/*About Page styling goes here*/
+section.about-page-about {
+  border-bottom: none;
+  width: 100%;
+  line-height: 1.8;
+}
+
+.about-page-image {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;    
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/*capabilities styling section goes here*/
+#capabilities.capabilities-section {
+  padding: 116px 0 80px;
+  border-bottom: 1px solid #484848;
+}
+
+h2.capabilities-title, h2.experience-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 0.9;
+  letter-spacing: 0;
+  max-width: 307px;
+  white-space: nowrap;
+}
+
+div.capabilities-right, div.experience-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div p.capabilities-paragraph {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  padding-bottom: 10px;
+}
+
+div span.capability-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid #484848;
+  border-radius: 25px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 20px 10px 0 0;
+  background: transparent;
+}
+
+/*My Experience Styling Goes Here*/
+  #experience.experience-section {
+    padding: 116px 0 80px;
+    border-bottom: 1px solid #484848;
+  }
+
+div.experience-item .experience-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+#experience .experience-item {
+  width: 100%;
+  display: block;
+  max-width: 704px;
+}
+
+div.experience-item .experience-top p.experience-role, div.experience-item .experience-top p.experience-company, div.experience-item .experience-top p.experience-date, div.experience-item  p.experience-description {
+  font-family: "Manrope", sans-serif;
+}
+
+div.experience-item .experience-top p.experience-company, div.experience-item .experience-top p.experience-date, div.experience-item  p.experience-description {
+  font-size: 16px;
+}
+
+div.experience-item .experience-top p.experience-role {
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+div.experience-item .experience-top p.experience-company { 
+  font-weight: 400;
+  color: #d3e979;
+}
+
+div.experience-item .experience-top p.experience-date {
+  font-weight: 600;
+  color: white;
+}
+
+div.experience-item  p.experience-description {
+  font-weight: 400;
+  line-height: 1.6;
+  color: white;
+}
+
+/*Media queries for responsiveness*/
 @media (min-width: 992px) {
   .nav-container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 24px 60px;
+  }
+
+  #contact .container, #capabilities .container,
+  #experience .container, #about.about-page-about .container {
+    max-width: 1240px; 
+  }
+
+  #capabilities .capabilities-right,
+  #experience .experience-right {
+    padding-left: 65px; 
   }
 }
 
@@ -307,7 +580,7 @@ a.link-icons:hover {
 
   a.nav-link:hover::after {
     width: 30%;  
-}
+  }
 
   .hero-image {
     margin: 0 auto 30px auto;
@@ -316,6 +589,49 @@ a.link-icons:hover {
   div.right-project-content{
     max-width: none; 
   }
+
+  #about.about-section {
+  padding: 80px 0 64px 0;
+  }
+
+  .about-section h2.about-title {
+  font-size: 57px;
+  line-height: 1;
+  max-width: none;
+  }
+
+div.about-right {
+  gap: 24px;
+  max-width: 100%;
+  }
+
+.about-section p.about-paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  }
+
+.about-section p.about-description-paragraph {
+  font-size: 16px; 
+  line-height: 1.5; 
+  }
+
+img.about-mobile-img {
+  width: 100%;
+  max-width: 343px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+section.about-page-about .about-title {
+    padding-top: 20px;
+  }
+
+div p.capabilities-paragraph {
+  padding-top: 20px;
+}
 }
 
 @media (max-width: 576px) {
@@ -358,7 +674,7 @@ a.link-icons:hover {
     justify-content: center;
   }
 
-  .hero-image img {
+  .hero-image img, .about-page-image {
     width: min(343px, 100%);
     aspect-ratio: 1 / 1;
     height: auto;
@@ -414,6 +730,77 @@ a.link-icons:hover {
   div.right-project-content{
     max-width: none; 
   }
+
+  #about.about-section, #contact.contact-section {
+    padding: 80px 0 64px 0;
+  }
+
+  div h2.contact-title {
+    font-size: 43px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .contact-section p.contact-paragraph  {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 269px;
+  }
+
+  div.contact-left, div.contact-form-container {
+    max-width: 343px;
+    width: 100%;
+  }
+
+   div form.contact-form {
+    gap: 32px;
+  }
+
+  .contact-form input.form-control {
+    height: 48px;
+    padding: 10px 16px;
+  }
+  
+  .contact-form textarea.form-control {
+    height: 148px;
+  }
+
+  .contact-section div.social-icons {
+    gap: 10px;
+  }
+
+  #capabilities.capabilities-section, #experience.experience-section {
+  padding: 80px 0 80px;
+  }
+
+  h2.capabilities-title, h2.experience-title {
+  font-size: 43px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  }
+
+  div p.capabilities-paragraph {
+  font-size: 16px;
+  line-height: 1.6; 
+  }
+
+  div span.capability-icon {
+  font-size: 14px;
 }
+
+div.experience-item .experience-top p.experience-item {
+  padding: 16px;
+}
+
+div.experience-item .experience-top p.experience-role {
+  font-size: 16px;
+}
+
+div.experience-item p.experience-description {
+  font-size: 14px;
+}
+
+}
+
 
 
