@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 html, body {
@@ -786,6 +785,10 @@ div p.capabilities-paragraph {
 
   div span.capability-icon {
   font-size: 14px;
+}
+
+div p.capabilities-paragraph {
+  padding-top: 0;
 }
 
 div.experience-item .experience-top p.experience-item {
